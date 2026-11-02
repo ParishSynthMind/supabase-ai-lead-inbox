@@ -1,0 +1,11 @@
+.venv
+.env
+out
+tests
+media
+supabase
+.git
+.github
+__pycache__
+.pytest_cache
+PORTFOLIO-LISTING.md

@@ -1,0 +1,9 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+out/
+supabase/.branches
+supabase/.temp
+PORTFOLIO-LISTING.md
