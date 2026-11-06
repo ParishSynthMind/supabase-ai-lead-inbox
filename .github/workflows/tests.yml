@@ -6,7 +6,7 @@ on:
 
 jobs:
   unit:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
         python-version: ["3.9", "3.12"]
@@ -20,7 +20,7 @@ jobs:
 
   rls-integration:
     # Local Supabase stack (Postgres, PostgREST, Auth) in Docker on the runner. No secrets, no Claude call.
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -34,7 +34,7 @@ jobs:
       - run: SUPABASE_INTEGRATION=1 pytest -m integration -v
 
   docker:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - run: docker build -t lead-inbox .
